@@ -1,0 +1,546 @@
+{
+  "name": "stm32wle5jc_blink",
+  "source_ide": "STM32CubeIDE",
+  "path": "f:/projects/radio/stm32/workspace_1.17.0/stm32wle5jc_blink",
+  "languages": [
+      "C"
+  ],
+  "configurations": [
+    {
+      "name": "Debug",
+      "output_filename": "stm32wle5jc_blink",
+      "type": "Executable",
+      "toolchain_type": "GCC",
+      "toolchain_prefix": "arm-none-eabi-",
+      "mcu": "STM32WLE5JCIx",
+      "board": "genericBoard",
+      "sources": [
+        { "path": "Core/Src/main.c" },
+
+        { "path": "Core/Src/stm32wlxx_hal_msp.c" },
+
+        { "path": "Core/Src/stm32wlxx_it.c" },
+
+        { "path": "Core/Src/syscalls.c" },
+
+        { "path": "Core/Src/sysmem.c" },
+
+        { "path": "Core/Src/system_stm32wlxx.c" },
+
+        { "path": "Core/Startup/startup_stm32wle5jcix.s" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma_ex.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_exti.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_flash.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_flash_ex.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_uart.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_uart_ex.c" }
+      ],
+      "tools": [
+            {
+              "type": "c_assembler",
+              "options": {
+                      "option.debuglevel": "-g3"                   
+,                      "option.definedsymbols": "-DDEBUG"                   
+,                      "option.preprocessassembler": "-x assembler-with-cpp"                   
+              },
+
+              
+              "flags": [
+                  "-mfloat-abi=soft",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-mcpu=cortex-m4",
+
+                  "-g3",
+
+                  "-DDEBUG",
+
+                  "-x",
+
+                  "assembler-with-cpp"
+              ]
+            }
+,            {
+              "type": "c_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu11"                   
+,                      "option.debuglevel": "-g3"                   
+,                      "option.definedsymbols": "-DDEBUG, -DCORE_CM4, -DUSE_HAL_DRIVER, -DSTM32WLE5xx"                   
+,                      "option.includepaths": "-I../Core/Inc, -I../Drivers/STM32WLxx_HAL_Driver/Inc, -I../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy, -I../Drivers/CMSIS/Device/ST/STM32WLxx/Include, -I../Drivers/CMSIS/Include"                   
+,                      "option.optimization.level": "-O0"                   
+,                      "option.ffunction": "-ffunction-sections"                   
+,                      "option.fdata": "-fdata-sections"                   
+,                      "option.warnings.all": "-Wall"                   
+,                      "option.fstackusage": "-fstack-usage"                   
+,                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"                   
+              },
+
+              
+              "flags": [
+                  "-mfloat-abi=soft",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-mcpu=cortex-m4",
+
+                  "-std=gnu11",
+
+                  "-g3",
+
+                  "-DDEBUG",
+
+                  "-DCORE_CM4",
+
+                  "-DUSE_HAL_DRIVER",
+
+                  "-DSTM32WLE5xx",
+
+                  "-I../Core/Inc",
+
+                  "-I../Drivers/STM32WLxx_HAL_Driver/Inc",
+
+                  "-I../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy",
+
+                  "-I../Drivers/CMSIS/Device/ST/STM32WLxx/Include",
+
+                  "-I../Drivers/CMSIS/Include",
+
+                  "-O0",
+
+                  "-ffunction-sections",
+
+                  "-fdata-sections",
+
+                  "-Wall",
+
+                  "-fstack-usage",
+
+                  "-fcyclomatic-complexity"
+              ]
+            }
+,            {
+              "type": "cpp_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu++14"                   
+,                      "option.debuglevel": "-g3"                   
+,                      "option.optimization.level": "-O0"                   
+,                      "option.ffunction": "-ffunction-sections"                   
+,                      "option.fdata": "-fdata-sections"                   
+,                      "option.noexceptions": "-fno-exceptions"                   
+,                      "option.nortti": "-fno-rtti"                   
+,                      "option.nousecxaatexit": "-fno-use-cxa-atexit"                   
+,                      "option.warnings.all": "-Wall"                   
+,                      "option.fstackusage": "-fstack-usage"                   
+,                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"                   
+              },
+
+              
+              "flags": [
+                  "-mfloat-abi=soft",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-mcpu=cortex-m4",
+
+                  "-std=gnu++14",
+
+                  "-g3",
+
+                  "-O0",
+
+                  "-ffunction-sections",
+
+                  "-fdata-sections",
+
+                  "-fno-exceptions",
+
+                  "-fno-rtti",
+
+                  "-fno-use-cxa-atexit",
+
+                  "-Wall",
+
+                  "-fstack-usage",
+
+                  "-fcyclomatic-complexity"
+              ]
+            }
+,            {
+              "type": "c_linker",
+              "options": {
+                      "option.script": "-T\"F:/projects/radio/stm32/workspace_1.17.0/stm32wle5jc_blink/STM32WLE5JCIX_FLASH.ld\""                   
+,                      "option.systemcalls": "--specs=nosys.specs"                   
+,                      "option.map": "-Wl,-Map=\"stm32wle5jc_blink.map\""                   
+,                      "option.gcsections": "-Wl,--gc-sections"                   
+,                      "option.static": "-static"                   
+,                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o"                   
+,                      "option.libmath": "-Wl,--start-group -lc -lm -Wl,--end-group"                   
+              },
+
+              
+              "flags": [
+                  "-mfloat-abi=soft",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-mcpu=cortex-m4",
+
+                  "-T\"F:/projects/radio/stm32/workspace_1.17.0/stm32wle5jc_blink/STM32WLE5JCIX_FLASH.ld\"",
+
+                  "--specs=nosys.specs",
+
+                  "-Wl,-Map=\"stm32wle5jc_blink.map\"",
+
+                  "-Wl,--gc-sections",
+
+                  "-static"
+              ]
+            }
+,            {
+              "type": "cpp_linker",
+              "options": {
+                      "option.script": "-T\"\""                   
+,                      "option.systemcalls": "--specs=nosys.specs"                   
+,                      "option.map": "-Wl,-Map=\"stm32wle5jc_blink.map\""                   
+,                      "option.gcsections": "-Wl,--gc-sections"                   
+,                      "option.static": "-static"                   
+,                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o"                   
+,                      "option.libmath": "-Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group"                   
+              },
+
+              
+              "flags": [
+                  "-mfloat-abi=soft",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-mcpu=cortex-m4",
+
+                  "-T\"\"",
+
+                  "--specs=nosys.specs",
+
+                  "-Wl,-Map=\"stm32wle5jc_blink.map\"",
+
+                  "-Wl,--gc-sections",
+
+                  "-static"
+              ]
+            }
+,            {
+              "type": "c_archiver",
+              "options": {
+                      "option.replace": "-r"                   
+              },
+
+              
+              "flags": [
+                  "-mfloat-abi=soft",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-mcpu=cortex-m4",
+
+                  "-r"
+              ]
+            }
+      ]
+    },
+    {
+      "name": "Release",
+      "output_filename": "stm32wle5jc_blink",
+      "type": "Executable",
+      "toolchain_type": "GCC",
+      "toolchain_prefix": "arm-none-eabi-",
+      "mcu": "STM32WLE5JCIx",
+      "board": "genericBoard",
+      "sources": [
+        { "path": "Core/Src/main.c" },
+
+        { "path": "Core/Src/stm32wlxx_hal_msp.c" },
+
+        { "path": "Core/Src/stm32wlxx_it.c" },
+
+        { "path": "Core/Src/syscalls.c" },
+
+        { "path": "Core/Src/sysmem.c" },
+
+        { "path": "Core/Src/system_stm32wlxx.c" },
+
+        { "path": "Core/Startup/startup_stm32wle5jcix.s" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma_ex.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_exti.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_flash.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_flash_ex.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_uart.c" },
+
+        { "path": "Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_uart_ex.c" }
+      ],
+      "tools": [
+            {
+              "type": "c_assembler",
+              "options": {
+                      "option.preprocessassembler": "-x assembler-with-cpp"                   
+              },
+
+              
+              "flags": [
+                  "-mfloat-abi=soft",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-mcpu=cortex-m4",
+
+                  "-x",
+
+                  "assembler-with-cpp"
+              ]
+            }
+,            {
+              "type": "c_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu11"                   
+,                      "option.definedsymbols": "-DCORE_CM4, -DUSE_HAL_DRIVER, -DSTM32WLE5xx"                   
+,                      "option.includepaths": "-I../Core/Inc, -I../Drivers/STM32WLxx_HAL_Driver/Inc, -I../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy, -I../Drivers/CMSIS/Device/ST/STM32WLxx/Include, -I../Drivers/CMSIS/Include"                   
+,                      "option.optimization.level": "-Os"                   
+,                      "option.ffunction": "-ffunction-sections"                   
+,                      "option.fdata": "-fdata-sections"                   
+,                      "option.warnings.all": "-Wall"                   
+,                      "option.fstackusage": "-fstack-usage"                   
+,                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"                   
+              },
+
+              
+              "flags": [
+                  "-mfloat-abi=soft",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-mcpu=cortex-m4",
+
+                  "-std=gnu11",
+
+                  "-DCORE_CM4",
+
+                  "-DUSE_HAL_DRIVER",
+
+                  "-DSTM32WLE5xx",
+
+                  "-I../Core/Inc",
+
+                  "-I../Drivers/STM32WLxx_HAL_Driver/Inc",
+
+                  "-I../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy",
+
+                  "-I../Drivers/CMSIS/Device/ST/STM32WLxx/Include",
+
+                  "-I../Drivers/CMSIS/Include",
+
+                  "-Os",
+
+                  "-ffunction-sections",
+
+                  "-fdata-sections",
+
+                  "-Wall",
+
+                  "-fstack-usage",
+
+                  "-fcyclomatic-complexity"
+              ]
+            }
+,            {
+              "type": "cpp_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu++14"                   
+,                      "option.optimization.level": "-Os"                   
+,                      "option.ffunction": "-ffunction-sections"                   
+,                      "option.fdata": "-fdata-sections"                   
+,                      "option.noexceptions": "-fno-exceptions"                   
+,                      "option.nortti": "-fno-rtti"                   
+,                      "option.nousecxaatexit": "-fno-use-cxa-atexit"                   
+,                      "option.warnings.all": "-Wall"                   
+,                      "option.fstackusage": "-fstack-usage"                   
+,                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"                   
+              },
+
+              
+              "flags": [
+                  "-mfloat-abi=soft",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-mcpu=cortex-m4",
+
+                  "-std=gnu++14",
+
+                  "-Os",
+
+                  "-ffunction-sections",
+
+                  "-fdata-sections",
+
+                  "-fno-exceptions",
+
+                  "-fno-rtti",
+
+                  "-fno-use-cxa-atexit",
+
+                  "-Wall",
+
+                  "-fstack-usage",
+
+                  "-fcyclomatic-complexity"
+              ]
+            }
+,            {
+              "type": "c_linker",
+              "options": {
+                      "option.script": "-T\"F:/projects/radio/stm32/workspace_1.17.0/stm32wle5jc_blink/STM32WLE5JCIX_FLASH.ld\""                   
+,                      "option.systemcalls": "--specs=nosys.specs"                   
+,                      "option.map": "-Wl,-Map=\"stm32wle5jc_blink.map\""                   
+,                      "option.gcsections": "-Wl,--gc-sections"                   
+,                      "option.static": "-static"                   
+,                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o"                   
+,                      "option.libmath": "-Wl,--start-group -lc -lm -Wl,--end-group"                   
+              },
+
+              
+              "flags": [
+                  "-mfloat-abi=soft",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-mcpu=cortex-m4",
+
+                  "-T\"F:/projects/radio/stm32/workspace_1.17.0/stm32wle5jc_blink/STM32WLE5JCIX_FLASH.ld\"",
+
+                  "--specs=nosys.specs",
+
+                  "-Wl,-Map=\"stm32wle5jc_blink.map\"",
+
+                  "-Wl,--gc-sections",
+
+                  "-static"
+              ]
+            }
+,            {
+              "type": "cpp_linker",
+              "options": {
+                      "option.script": "-T\"\""                   
+,                      "option.systemcalls": "--specs=nosys.specs"                   
+,                      "option.map": "-Wl,-Map=\"stm32wle5jc_blink.map\""                   
+,                      "option.gcsections": "-Wl,--gc-sections"                   
+,                      "option.static": "-static"                   
+,                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o"                   
+,                      "option.libmath": "-Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group"                   
+              },
+
+              
+              "flags": [
+                  "-mfloat-abi=soft",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-mcpu=cortex-m4",
+
+                  "-T\"\"",
+
+                  "--specs=nosys.specs",
+
+                  "-Wl,-Map=\"stm32wle5jc_blink.map\"",
+
+                  "-Wl,--gc-sections",
+
+                  "-static"
+              ]
+            }
+,            {
+              "type": "c_archiver",
+              "options": {
+                      "option.replace": "-r"                   
+              },
+
+              
+              "flags": [
+                  "-mfloat-abi=soft",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-mcpu=cortex-m4",
+
+                  "-r"
+              ]
+            }
+      ]
+    }
+  ]
+}
